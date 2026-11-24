@@ -1,9 +1,9 @@
-import { useId, type ComponentType } from "react";
-import { MessageCircle, Wallet, Users, Heart, Crown, Lightbulb, Palette, Rocket, Laptop, Sprout, Clock, Puzzle, Star, Flame, Trophy, Target, Zap, Lock } from "lucide-react";
+import { useId } from "react";
+import { type LucideIcon, MessageCircle, Wallet, Users, Heart, Crown, Lightbulb, Palette, Rocket, Laptop, Sprout, Clock, Puzzle, Star, Flame, Trophy, Target, Zap, Lock } from "lucide-react";
 import { CharSVG, CAST } from "./characters";
 import { shade } from "../theme";
 
-type Icon = ComponentType<{ size?: number; color?: string; strokeWidth?: number; "aria-hidden"?: boolean }>;
+type Icon = LucideIcon;
 export const WORLD_ICON: Record<string, Icon> = {
   com: MessageCircle, fin: Wallet, tea: Users, emo: Heart, lid: Crown, pen: Lightbulb,
   cre: Palette, inn: Rocket, dig: Laptop, emp: Sprout, tie: Clock, pro: Puzzle,

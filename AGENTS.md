@@ -1,18 +1,11 @@
-# Next steps discussion
+# LifeXperience
 
-React + Vite + Tailwind CSS project running inside Figma Make.
+Aplicacion educativa con React, Vite y Tailwind CSS.
 
-## Development Server
+## Desarrollo
 
-A Vite development server is always running on `$PORT` (default 8443). Source changes
-are reflected through hot reload.
-
-## Key Files
-
-- `src/main.tsx` - Browser entry point
-- `vite.figma.config.ts` - Figma Make wrapper configuration
-- `.mise.toml` - Toolchain versions
-
-## Project Guidelines
-
-Read and always follow the instructions in the [project guidelines](guidelines/Guidelines.md) unless the user requests otherwise.
+- Instala dependencias con `pnpm install`.
+- Configura `VITE_SUPABASE_URL` y `VITE_SUPABASE_ANON_KEY` en `.env`, usando `.env.example`. Sin ellas esta disponible el modo demo.
+- Inicia con `pnpm dev`; verifica con `pnpm typecheck` y `pnpm build`.
+- El codigo esta en `src/app`, los estilos en `src/styles` y el cliente de Supabase en `src/lib/supabase.ts`.
+- Sigue `guidelines/Guidelines.md` y consulta `docs/PLAN-MIGRACION.md`. No incluyas `.env` en el control de versiones.

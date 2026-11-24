@@ -1,0 +1,3 @@
+-- LifeXperience database seed
+-- Los usuarios demo viven en el cliente (SEED_USERS en el código de la app).
+-- Este archivo se deja disponible por si en el futuro se requieren datos semilla locales.

@@ -1,18 +1,15 @@
 import { createClient } from "@supabase/supabase-js";
-import { projectId, publicAnonKey } from "../../utils/supabase/info";
-
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.warn("[LifeXperience] Faltan VITE_SUPABASE_URL o VITE_SUPABASE_ANON_KEY en .env; disponible el modo demo.");
+}
 export const supabase = createClient(
-  `https://${projectId}.supabase.co`,
-  publicAnonKey,
-  {
-    auth: {
-      persistSession: true,
-      autoRefreshToken: true,
-    },
-  }
+  supabaseUrl || "http://127.0.0.1:1",
+  supabaseAnonKey || "demo-anon-key",
+  { auth: { persistSession: true, autoRefreshToken: true } }
 );
 
-// ─── Types ────────────────────────────────────────────────────────────────────
 export interface Profile {
   id: string;           // = auth.user.id (UUID)
   email: string;

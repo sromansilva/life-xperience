@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-set -euo pipefail
-
-exec pnpm exec vite --config vite.figma.config.ts --port "${PORT:-8443}" --host "${FIGMA_DEV_SERVER_HOST:-0.0.0.0}" --strictPort
